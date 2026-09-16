@@ -1,0 +1,108 @@
+/* A single-column academic workshop site with a photographic Adelaide header. */
+:root {
+  color-scheme: light;
+  --background: #f7f3f0;
+  --paper: #ffffff;
+  --ink: #3e393a;
+  --wine: #713b47;
+  --wine-dark: #542b35;
+  --heading: var(--wine);
+  --link: var(--wine);
+  --muted: #696163;
+  --line: #e5d7db;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 80px; }
+body { margin: 0; background: var(--background); color: var(--ink); font: 16px/1.75 Helvetica, Arial, sans-serif; }
+a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 1px; overflow-wrap: anywhere; }
+a:hover { color: var(--wine-dark); }
+:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
+h1, h2, p, ul, figure { margin: 0; }
+h1, h2 { color: var(--heading); font-weight: 400; }
+p, ul, address { margin-bottom: 16px; }
+strong { font-weight: 600; }
+ul { padding-left: 25px; }
+li { padding-left: 3px; }
+li + li { margin-top: 6px; }
+li::marker { color: var(--wine); }
+img { display: block; max-width: 100%; height: auto; }
+.page { width: min(1000px, calc(100% - 64px)); margin: 0 auto; }
+
+.skip-link { position: absolute; top: -80px; left: 16px; z-index: 10; padding: 8px 16px; background: var(--paper); }
+.skip-link:focus { top: 12px; }
+
+.site-header { position: relative; isolation: isolate; display: grid; place-items: center; min-height: 410px; padding: 58px 32px; color: white; background: #492b34; text-align: center; }
+.header-photo { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+.site-header::before { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(110deg, rgb(42 23 31 / 68%), rgb(42 23 31 / 62%)); }
+.header-content { max-width: 900px; }
+h1 { color: inherit; font-size: 34px; line-height: 1.35; font-weight: 500; }
+.workshop-edition { display: block; margin-top: 17px; font-size: 27px; }
+.workshop-date { margin: 21px 0 3px; font-size: 18px; }
+.workshop-location { margin: 0; font-size: 16px; }
+
+/* All navigation links remain visible at every screen size; no script needed. */
+.site-navigation { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; justify-content: center; gap: 3px 7px; padding: 10px 16px; border-block: 1px solid var(--wine); background: var(--wine); }
+.site-navigation a { display: block; padding: 5px 12px; color: white; font-size: 14px; text-decoration: none; }
+.site-navigation a:hover, .site-navigation a:focus-visible { color: white; background: var(--wine-dark); text-decoration: underline; }
+.site-navigation :focus-visible { outline-color: white; }
+
+main { padding: 8px 48px 26px; background: var(--paper); }
+main > section { padding-block: 26px 8px; }
+h2 { margin-bottom: 20px; padding-bottom: 9px; border-bottom: 1px solid var(--line); font-size: 26px; line-height: 1.4; }
+.announcement { color: var(--wine); font-style: italic; }
+.venue-details { display: grid; grid-template-columns: 1fr 320px; gap: 32px; align-items: start; margin-bottom: 9px; }
+.venue-details p:first-child { margin-bottom: 8px; }
+address { font-style: normal; }
+figcaption { margin-top: 8px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.site-footer { padding: 26px 24px 30px; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 13px; }
+.site-footer p { margin-bottom: 5px; }
+.photo-credit { margin-top: 15px; font-size: 11px; }
+
+@media (max-width: 900px) {
+  html { scroll-padding-top: 118px; }
+  .page { width: calc(100% - 40px); }
+  .site-header { padding-inline: 20px; }
+  h1 { font-size: 30px; }
+  .site-navigation { gap: 2px 4px; }
+  main { padding-inline: 32px; }
+  .venue-details { grid-template-columns: 1fr 260px; gap: 25px; }
+}
+
+@media (max-width: 640px) {
+  html { scroll-padding-top: 16px; }
+  .page { width: 100%; }
+  .site-header { min-height: 370px; padding: 38px 22px; }
+  .header-photo { object-position: 54% center; }
+  h1 { font-size: 25px; line-height: 1.4; }
+  .title-break { display: none; }
+  .workshop-edition { margin-top: 14px; font-size: 22px; }
+  .workshop-date { margin-top: 16px; font-size: 16px; }
+  .workshop-location { font-size: 14px; }
+  .site-navigation { position: static; gap: 0 3px; padding: 10px 12px; }
+  .site-navigation a { padding: 6px 10px; }
+  main { padding: 5px 22px 20px; }
+  main > section { padding-block: 24px 4px; }
+  h2 { margin-bottom: 16px; font-size: 24px; }
+  .venue-details { grid-template-columns: 1fr; gap: 8px; }
+  .venue-details figure { width: 100%; max-width: 400px; margin-bottom: 18px; }
+  .site-footer { padding-inline: 22px; }
+}
+
+@media print {
+  html { scroll-padding-top: 0; }
+  body { background: white; color: black; font-size: 11pt; }
+  .page { width: 100%; }
+  .site-header { display: block; min-height: 0; padding: 0 0 20px; color: black; background: white; }
+  .header-content { max-width: none; }
+  h1 { font-size: 23pt; }
+  .workshop-edition { font-size: 18pt; }
+  .site-navigation, .skip-link, .header-photo, .site-header::before { display: none; }
+  main { padding: 0; }
+  main > section { padding-block: 12px 0; }
+  h2 { font-size: 16pt; break-after: avoid; }
+  a { color: inherit; }
+  li, figure { break-inside: avoid; }
+  .venue-details { grid-template-columns: 1fr 220px; }
+  .site-footer { padding-block: 16px 0; }
+}

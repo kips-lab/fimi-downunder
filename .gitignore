@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+node_modules/
+.venv/
+__pycache__/
+.cache/
+playwright-report/
+test-results/
+
+# Local planning and publishing instructions
+/AGENTS.md
+/INSTRUCTIONS.md

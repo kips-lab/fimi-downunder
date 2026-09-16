@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//FIMI//FIMI Down Under 2026//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:fimi-down-under-2026-12-13
+DTSTAMP:20260916T223220Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261215
+SUMMARY:FIMI Down Under 2026
+LOCATION:National Wine Centre of Australia\, Adelaide\, Australia
+DESCRIPTION:Workshop on Functional Inference and Machine Intelligence.\nInv
+ ited talks and a poster session.\nVenue: National Wine Centre of Australia
+ \, corner of Botanic Road and Hackney Road\, Adelaide.\nDetailed programme
+  and registration information to be announced.
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
