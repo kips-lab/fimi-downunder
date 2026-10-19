@@ -10,3 +10,6 @@ test-results/
 # Local planning and publishing instructions
 /AGENTS.md
 /INSTRUCTIONS.md
+
+# Local registration response exports
+/FIMI 2026*Registration and Contributions (Responses)*.csv
