@@ -149,7 +149,13 @@
             </li>
             <li>
               <a href="https://profiles.sydney.edu.au/yiming.ying">Yiming Ying</a> (The University of Sydney, Australia)
-              <p class="talk-pending">Title and abstract: TBC.</p>
+              <p class="talk-title" id="yiming-ying-title">Stability and Generalization of Straight-Through Estimators for Training Two-Layer Quantized Neural Networks</p>
+              <div class="talk-controls">
+                <button type="button" class="talk-toggle" id="yiming-ying-abstract-toggle" aria-controls="yiming-ying-abstract" aria-expanded="true" aria-label="Talk abstract for Yiming Ying" hidden>abstract</button>
+              </div>
+              <div class="talk-panel" id="yiming-ying-abstract" role="region" aria-labelledby="yiming-ying-abstract-toggle">
+                <p>Quantisation is essential in modern deep learning for reducing memory footprints and accelerating inference on resource-constrained devices. However, training quantised networks with the straight-through estimator (STE) lacks theoretical understanding due to its non-smooth, discontinuous dynamics. In this work, we present a Statistical Learning Theory (SLT) framework for the identity STE in training two-layer binary-activation networks with hinge loss. We show that in the saturated-output regime, zero-initialised sample-wise STE updates are equivalent to stochastic sub-gradient descent on a convex latent loss, enabling a rigorous algorithmic stability analysis. By establishing approximate non-expansiveness of the update map, we prove explicit L<sub>2</sub> model-stability bounds that transfer isometrically to the full first-layer weight matrix. Crucially, we demonstrate that STE quantization achieves statistically optimal rates: an explicit excess induced-risk bound of 𝒪(n<sup>−1/2</sup>) at T = n<sup>2</sup>, and, under margin separability, an optimal 𝒪(R<sup>2</sup>/(γ<sup>2</sup> n)) expected excess misclassification error for a randomised one-pass iterate alongside a majority-vote guarantee.</p>
+              </div>
             </li>
           </ul>
           <p class="announcement">Additional invited speakers to be confirmed.</p>
