@@ -145,7 +145,13 @@
             </li>
             <li>
               <a href="https://profiles.uts.edu.au/Junyu.Xuan">Junyu Xuan</a> (University of Technology Sydney, Australia)
-              <p class="talk-pending">Title and abstract: TBC.</p>
+              <p class="talk-title" id="junyu-xuan-title">Functional Soft Diffusion Bridges</p>
+              <div class="talk-controls">
+                <button type="button" class="talk-toggle" id="junyu-xuan-abstract-toggle" aria-controls="junyu-xuan-abstract" aria-expanded="true" aria-label="Talk abstract for Junyu Xuan" hidden>abstract</button>
+              </div>
+              <div class="talk-panel" id="junyu-xuan-abstract" role="region" aria-labelledby="junyu-xuan-abstract-toggle">
+                <p>Diffusion bridges construct stochastic transports between prescribed endpoint distributions, yet stochastic optimal control formulations with soft terminal constraints have been developed primarily in finite-dimensional Euclidean spaces. We introduce Functional Soft Diffusion Bridge (FSDB), a framework for generative modeling of function-valued data that extends finite-penalty diffusion bridges to infinite-dimensional Hilbert spaces. FSDB relaxes exact endpoint conditioning through a quadratic terminal penalty with strength γ, yielding a closed-form feedback law involving the bounded resolvent (γ<sup>−1</sup>I+C<sub>t,T</sub>)<sup>−1</sup>. This formulation avoids the singular inverse-covariance operator associated with hard endpoint constraints while providing explicit control over the terminal penalty. We establish a spectral condition ensuring well-posedness of the infinite-dimensional reference process and show that the feedback recovers the corresponding hard function-space bridge in the limit γ → ∞. Experiments on synthetic functions, pharmacokinetic trajectories, and image-to-image transport demonstrate the framework’s applicability across diverse function-valued generative tasks.</p>
+              </div>
             </li>
             <li>
               <a href="https://profiles.sydney.edu.au/yiming.ying">Yiming Ying</a> (The University of Sydney, Australia)
