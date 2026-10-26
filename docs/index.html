@@ -83,7 +83,13 @@
             </li>
             <li>
               <a href="https://weihuang05.github.io/">Wei Huang</a> (RIKEN, Japan)
-              <p class="talk-pending">Title and abstract: TBC.</p>
+              <p class="talk-title" id="wei-huang-title">How Transformers Learn to Plan via Multi-Token Prediction</p>
+              <div class="talk-controls">
+                <button type="button" class="talk-toggle" id="wei-huang-abstract-toggle" aria-controls="wei-huang-abstract" aria-expanded="true" aria-label="Talk abstract for Wei Huang" hidden>abstract</button>
+              </div>
+              <div class="talk-panel" id="wei-huang-abstract" role="region" aria-labelledby="wei-huang-abstract-toggle">
+                <p>Next-token prediction (NTP) is the standard training objective for language models, yet it often struggles to capture the global structure required for planning and reasoning. Multi-token prediction (MTP), which trains a model to predict several future tokens at once, has emerged as a promising alternative. In this talk, I will discuss why MTP helps planning, from both empirical and theoretical perspectives. Empirically, MTP consistently outperforms NTP on synthetic graph path-finding tasks as well as on more realistic benchmarks such as Countdown and Boolean satisfiability. Theoretically, we analyse a simplified two-layer Transformer trained on a star-graph path-finding task and prove that MTP induces a two-stage reverse-reasoning process: the model first attends to the goal node and then reconstructs the path by tracing intermediate nodes backward. This behaviour arises from a gradient decoupling property of MTP, which provides a cleaner training signal than NTP.</p>
+              </div>
             </li>
             <li>
               <a href="https://sites.google.com/view/mimaizumi/">Masaaki Imaizumi</a> (The University of Tokyo, Japan)
