@@ -133,7 +133,13 @@
             </li>
             <li>
               <a href="https://donlapark.pages.dev/">Donlapark Ponnoprat</a> (Chiang Mai University, Thailand)
-              <p class="talk-pending">Title and abstract: TBC.</p>
+              <p class="talk-title" id="donlapark-ponnoprat-title">Doubly Robust Learning of Conditional Counterfactual Mean Embeddings</p>
+              <div class="talk-controls">
+                <button type="button" class="talk-toggle" id="donlapark-ponnoprat-abstract-toggle" aria-controls="donlapark-ponnoprat-abstract" aria-expanded="true" aria-label="Talk abstract for Donlapark Ponnoprat" hidden>abstract</button>
+              </div>
+              <div class="talk-panel" id="donlapark-ponnoprat-abstract" role="region" aria-labelledby="donlapark-ponnoprat-abstract-toggle">
+                <p>Heterogeneous treatment effects are usually summarized by the conditional average treatment effect. However, two treatments with the same conditional average can produce outcome distributions with different tails and different numbers of modes. In this talk, I will present a framework for estimating the full conditional distribution of a counterfactual outcome, represented by its mean embedding in a reproducing kernel Hilbert space. In the first part, I will show how a doubly robust pseudo-outcome reduces this problem to a vector-valued regression, which kernel ridge regression or neural network estimators can solve. In the second part, I will discuss finite-sample learning rates, in which the first stage enters only through the smaller of the two nuisance errors. Thus, the second-stage error governs the bound as long as one of the two nuisance models is estimated consistently. Finally, I will demonstrate applications to several downstream tasks, namely risk-sensitive treatment effect estimation, conditional two-sample testing, and risk-sensitive treatment policy learning.</p>
+              </div>
             </li>
             <li>
               <a href="https://mahalakshmi-sabanayagam.github.io/">Mahalakshmi Sabanayagam</a> (Adelaide University, Australia)
