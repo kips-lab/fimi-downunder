@@ -57,7 +57,7 @@
 
         <section id="speakers" aria-labelledby="speakers-title">
           <h2 id="speakers-title">Invited speakers</h2>
-          <p>The following speakers are confirmed:</p>
+          <p>The following speakers are confirmed, except where noted:</p>
           <ul class="speaker-list">
             <li>
               <a href="https://chau999.github.io/">Siu Lun Chau</a> (Nanyang Technological University, Singapore)
@@ -111,6 +111,20 @@
                 <p>Transformers perform inference by iteratively transforming token representations across layers. This layerwise computation has been studied empirically, and recent mean-field theories of Transformer dynamics explain how attention can drive token distributions toward clustering. However, existing mean-field analyses largely treat model parameters as prescribed, leaving open how training reshapes this clustering picture.</p>
                 <p>We study this question in a noisy mean-field Transformer in which only a parameter-linear FFN is trained under L² regularization. We find and analyze a training-induced phase in the dynamics: after initially following attention-driven clustering, the token distribution can leave the clustered regime near the final layers. Our mathematical analysis is based on an entropy-regularized interaction energy that captures the clustering bias of attention.</p>
                 <p>More broadly, our results point toward a training-aware mean-field theory of Transformer dynamics, in which training and inference dynamics are treated together.</p>
+              </div>
+            </li>
+            <li>
+              <a href="https://allmodelsarewrong.net/">Song Liu</a> (University of Bristol, United Kingdom)
+              <p class="talk-pending">Attendance to be confirmed.</p>
+              <p class="talk-title" id="song-liu-title">Zero-Flow Methods</p>
+              <div class="talk-controls">
+                <button type="button" class="talk-toggle" id="song-liu-abstract-toggle" aria-controls="song-liu-abstract" aria-expanded="true" aria-label="Talk abstract for Song Liu" hidden>abstract</button>
+              </div>
+              <div class="talk-panel" id="song-liu-abstract" role="region" aria-labelledby="song-liu-abstract-toggle">
+                <p>We propose the Zero-Flow Criterion, which states that under independent coupling, the optimal velocity field of a flow matching objective vanishes everywhere at <i>t</i> = 0.5 if and only if the two endpoint distributions are identical. Leveraging this time-reversal symmetry, we establish a family of novel statistical discrepancies that measure the differences between two distributions. Unlike kernel-based methods such as Maximum Mean Discrepancy (MMD), our approach directly learns discriminative features from data via flow-matching regression or power maximization. It avoids selecting a kernel manually, which may not scale well in high-dimensional settings. Furthermore, when compared with variational <i>f</i>-divergence estimation, our discrepancy estimation does not involve density ratio parameterization or estimation, which often leads to instability when two distributions differ significantly. In this talk, we show how this novel discrepancy provides a unified framework for our three recent works:</p>
+                <p>Zero-Flow Encoders for certifying conditional independence in representation learning: <a href="https://arxiv.org/abs/2602.00797">https://arxiv.org/abs/2602.00797</a></p>
+                <p>Zero-Flow Two-Sample Tests, with Wasserstein control and asymptotic normality: <a href="https://arxiv.org/abs/2607.21542">https://arxiv.org/abs/2607.21542</a></p>
+                <p>Zero-Flux Discrepancy, an extension of the zero-flow criterion for high-dimensional categorical distributions: <a href="https://arxiv.org/abs/2610.01472">https://arxiv.org/abs/2610.01472</a></p>
               </div>
             </li>
             <li>
@@ -235,3 +249,4 @@
     </div>
   </body>
 </html>
+
