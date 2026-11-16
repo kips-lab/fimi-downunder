@@ -12,8 +12,22 @@
     <meta property="og:description" content="Workshop on Functional Inference and Machine Intelligence, 13–14 December 2026 at the National Wine Centre of Australia, Adelaide, immediately after NeurIPS in Sydney.">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/site.css">
-    <script src="assets/talks.js" defer></script>
-  </head>
+    
+  <style>
+.speaker-grid {list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 28px;margin-top:28px;}
+.speaker-card {display:flex;gap:18px;padding:22px 0;border-top:1px solid var(--line);min-width:0;}
+.speaker-photo {width:96px;height:96px;flex:0 0 96px;object-fit:cover;object-position:center 24%;border-radius:50%;background:#eee8e6;}
+.speaker-placeholder{display:grid;place-items:center;color:var(--wine);font-size:25px;font-weight:600;}
+.speaker-information {min-width:0;}
+.speaker-information h3 {font-size:17px;line-height:1.35;margin:0 0 5px;font-weight:600;}
+.speaker-information p {margin:0 0 9px;}
+.speaker-institution {font-size:12px;line-height:1.5;color:var(--muted);}
+.speaker-talk {font-size:14px;line-height:1.55;}
+.abstract-link {font-size:12px;font-weight:600;}
+.programme-link {font-weight:600;}
+@media(max-width:760px){.speaker-grid{grid-template-columns:1fr;gap:0;}.speaker-card{padding:20px 0;}.speaker-photo{width:80px;height:80px;flex-basis:80px;}}
+</style>
+</head>
   <body id="top">
     <a class="skip-link" href="#main">Skip to content</a>
 
@@ -31,7 +45,7 @@
         <a href="#home">Home</a>
         <a href="#registration">Registration</a>
         <a href="#speakers">Invited speakers</a>
-        <a href="#programme">Programme</a>
+        <a href="programme.html">Programme</a>
         <a href="#posters">Poster session</a>
         <a href="#organisers">Organisers</a>
         <a href="#venue">Venue</a>
@@ -55,148 +69,20 @@
           <p>The registration fee is <strong>AUD 150</strong>. Invited speakers are exempt from this fee. A light lunch and refreshments will be provided.</p>
         </section>
 
-        <section id="speakers" aria-labelledby="speakers-title">
-          <h2 id="speakers-title">Invited speakers</h2>
-          <p>The following speakers are confirmed:</p>
-          <ul class="speaker-list">
-            <li>
-              <a href="https://chau999.github.io/">Siu Lun Chau</a> (Nanyang Technological University, Singapore)
-              <p class="talk-title" id="siu-lun-chau-title">Explainable Kernel Machines with Shapley values</p>
-              <div class="talk-controls">
-                <button type="button" class="talk-toggle" id="siu-lun-chau-abstract-toggle" aria-controls="siu-lun-chau-abstract" aria-expanded="true" aria-label="Talk abstract for Siu Lun Chau" hidden>abstract</button>
-              </div>
-              <div class="talk-panel" id="siu-lun-chau-abstract" role="region" aria-labelledby="siu-lun-chau-abstract-toggle">
-                <p>Kernel methods provide a rich framework for nonlinear prediction and statistical inference, but their flexibility often obscures which features drive their outputs. Cooperative game theory offers a principled recipe for attribution: treat features as players and distribute their joint contribution using Shapley values, which average each feature’s marginal contribution across feature subsets. Applying this recipe, however, requires us to decide what a subset contributes and to overcome the exponential cost of enumerating subsets. How can the mathematical structure of kernel methods help us address both challenges? In this talk, we trace a progression from RKHS-SHAP through PKeX-Shapley to QuadraSHAP, showing how kernel structure enables principled and increasingly efficient feature attribution for interpretable statistical inference.</p>
-              </div>
-            </li>
-            <li>
-              <a href="https://www.ism.ac.jp/~fukumizu/">Kenji Fukumizu</a> (The Institute of Statistical Mathematics, Japan)
-              <p class="talk-title" id="kenji-fukumizu-title">Understanding Flow Matching: Variational and Analytic Viewpoints</p>
-              <div class="talk-controls">
-                <button type="button" class="talk-toggle" id="kenji-fukumizu-abstract-toggle" aria-controls="kenji-fukumizu-abstract" aria-expanded="true" aria-label="Talk abstract for Kenji Fukumizu" hidden>abstract</button>
-              </div>
-              <div class="talk-panel" id="kenji-fukumizu-abstract" role="region" aria-labelledby="kenji-fukumizu-abstract-toggle">
-                <p>We discuss the dynamics of Optimal Transport Conditional Flow Matching (OT-CFM) under the manifold hypothesis, where the support of the target distribution is a low dimensional manifold.  We first derive an exact proximal expression for its vector field as a function of the location using an extended Brenier potential for the OT.  The vector field can be written by a denoiser. which is expressed by the proximal operator associated with the potential function.  Based on the explicit proximal form of the vector field, we analyze the manifold stability against perturbations to initial points, using the Lyapunov exponents of the dynamics.  By analyzing the local behavior with the tools in convex analysis, we show that the dynamics contracts linearly in the perturbation of the normal directions to the manifold, while perturbation in the tangential directions is preserved; this implies the stability of the manifold structure to the perturbations.</p>
-                <p>We also establish convergence of minibatch OT-CFM with neural network learning to population OT-CFM under regularity and stability assumptions, with rate exponents governed by the intrinsic rather than ambient dimension.</p>
-                <p>We discuss a terminal memorization regime of OT-CFM with finite data in the idealized minibatch model, where denoising identifies individual training examples in the terminal time. Explicit geometric models quantify how the associated time scales depend on dataset size, batch size, and intrinsic dimension. Experiments on synthetic data, MNIST, and CIFAR-10 support the predicted geometric behavior.</p>
-              </div>
-            </li>
-            <li>
-              <a href="https://weihuang05.github.io/">Wei Huang</a> (RIKEN, Japan)
-              <p class="talk-title" id="wei-huang-title">How Transformers Learn to Plan via Multi-Token Prediction</p>
-              <div class="talk-controls">
-                <button type="button" class="talk-toggle" id="wei-huang-abstract-toggle" aria-controls="wei-huang-abstract" aria-expanded="true" aria-label="Talk abstract for Wei Huang" hidden>abstract</button>
-              </div>
-              <div class="talk-panel" id="wei-huang-abstract" role="region" aria-labelledby="wei-huang-abstract-toggle">
-                <p>Next-token prediction (NTP) is the standard training objective for language models, yet it often struggles to capture the global structure required for planning and reasoning. Multi-token prediction (MTP), which trains a model to predict several future tokens at once, has emerged as a promising alternative. In this talk, I will discuss why MTP helps planning, from both empirical and theoretical perspectives. Empirically, MTP consistently outperforms NTP on synthetic graph path-finding tasks as well as on more realistic benchmarks such as Countdown and Boolean satisfiability. Theoretically, we analyse a simplified two-layer Transformer trained on a star-graph path-finding task and prove that MTP induces a two-stage reverse-reasoning process: the model first attends to the goal node and then reconstructs the path by tracing intermediate nodes backward. This behaviour arises from a gradient decoupling property of MTP, which provides a cleaner training signal than NTP.</p>
-              </div>
-            </li>
-            <li>
-              <a href="https://sites.google.com/view/mimaizumi/">Masaaki Imaizumi</a> (The University of Tokyo, Japan)
-              <p class="talk-title" id="masaaki-imaizumi-title">Memorization Capacity via Mean-Field Transformer Dynamics</p>
-              <div class="talk-controls">
-                <button type="button" class="talk-toggle" id="masaaki-imaizumi-abstract-toggle" aria-controls="masaaki-imaizumi-abstract" aria-expanded="true" aria-label="Talk abstract for Masaaki Imaizumi" hidden>abstract</button>
-              </div>
-              <div class="talk-panel" id="masaaki-imaizumi-abstract" role="region" aria-labelledby="masaaki-imaizumi-abstract-toggle">
-                <p>This study investigates the memorization capacity of Transformers based on their inference dynamics. It has been noted that the performance of Transformers can be described by specific functions arising from the interactions between tokens mediated by the attention layer. However, previous studies have been limited to Transformers with simplified weight matrices and other components. In this study, we analyze Transformer inference under general weight matrices using the mean-field approximation. As a result, we demonstrate that specific eigenvalue components arising from the weight components enhance the memorization capacity of the entire Transformer system. Based on this, we also discuss learning correction methods to further improve this performance.</p>
-              </div>
-            </li>
-            <li>
-              <a href="https://www.riken.jp/en/research/labs/aip/math/highdim_struct_theor/index.html">Noboru Isobe</a> (RIKEN, Japan)
-              <p class="talk-title" id="noboru-isobe-title">Training-Induced Escape from Token Clustering in a Mean-Field Formulation of Transformers</p>
-              <div class="talk-controls">
-                <button type="button" class="talk-toggle" id="noboru-isobe-abstract-toggle" aria-controls="noboru-isobe-abstract" aria-expanded="true" aria-label="Talk abstract for Noboru Isobe" hidden>abstract</button>
-              </div>
-              <div class="talk-panel" id="noboru-isobe-abstract" role="region" aria-labelledby="noboru-isobe-abstract-toggle">
-                <p>Transformers perform inference by iteratively transforming token representations across layers. This layerwise computation has been studied empirically, and recent mean-field theories of Transformer dynamics explain how attention can drive token distributions toward clustering. However, existing mean-field analyses largely treat model parameters as prescribed, leaving open how training reshapes this clustering picture.</p>
-                <p>We study this question in a noisy mean-field Transformer in which only a parameter-linear FFN is trained under L² regularization. We find and analyze a training-induced phase in the dynamics: after initially following attention-driven clustering, the token distribution can leave the clustered regime near the final layers. Our mathematical analysis is based on an entropy-regularized interaction energy that captures the clustering bias of attention.</p>
-                <p>More broadly, our results point toward a training-aware mean-field theory of Transformer dynamics, in which training and inference dynamics are treated together.</p>
-              </div>
-            </li>
-            <li>
-              <a href="https://allmodelsarewrong.net/">Song Liu</a> (University of Bristol, United Kingdom)
-              <p class="talk-title" id="song-liu-title">Zero-Flow Methods</p>
-              <div class="talk-controls">
-                <button type="button" class="talk-toggle" id="song-liu-abstract-toggle" aria-controls="song-liu-abstract" aria-expanded="true" aria-label="Talk abstract for Song Liu" hidden>abstract</button>
-              </div>
-              <div class="talk-panel" id="song-liu-abstract" role="region" aria-labelledby="song-liu-abstract-toggle">
-                <p>We propose the Zero-Flow Criterion, which states that under independent coupling, the optimal velocity field of a flow matching objective vanishes everywhere at <i>t</i> = 0.5 if and only if the two endpoint distributions are identical. Leveraging this time-reversal symmetry, we establish a family of novel statistical discrepancies that measure the differences between two distributions. Unlike kernel-based methods such as Maximum Mean Discrepancy (MMD), our approach directly learns discriminative features from data via flow-matching regression or power maximization. It avoids selecting a kernel manually, which may not scale well in high-dimensional settings. Furthermore, when compared with variational <i>f</i>-divergence estimation, our discrepancy estimation does not involve density ratio parameterization or estimation, which often leads to instability when two distributions differ significantly. In this talk, we show how this novel discrepancy provides a unified framework for our three recent works:</p>
-                <p>Zero-Flow Encoders for certifying conditional independence in representation learning: <a href="https://arxiv.org/abs/2602.00797">https://arxiv.org/abs/2602.00797</a></p>
-                <p>Zero-Flow Two-Sample Tests, with Wasserstein control and asymptotic normality: <a href="https://arxiv.org/abs/2607.21542">https://arxiv.org/abs/2607.21542</a></p>
-                <p>Zero-Flux Discrepancy, an extension of the zero-flow criterion for high-dimensional categorical distributions: <a href="https://arxiv.org/abs/2610.01472">https://arxiv.org/abs/2610.01472</a></p>
-              </div>
-            </li>
-            <li>
-              <a href="https://www.krikamol.org/">Krikamol Muandet</a> (CISPA Helmholtz Center for Information Security, Saarbrücken, Germany)
-              <p class="talk-pending">Title and abstract: TBC.</p>
-            </li>
-            <li>
-              <a href="https://tanmnguyen89.github.io/">Tan Minh Nguyen</a> (National University of Singapore, Singapore)
-              <p class="talk-pending">Title and abstract: TBC.</p>
-            </li>
-            <li>
-              <a href="https://sites.google.com/site/hohtastats/home">Hirofumi Ota</a> (The University of Tokyo, Japan)
-              <p class="talk-title" id="hirofumi-ota-title">Anytime-Valid Statistical Inference in LLM Self-Consistency</p>
-              <div class="talk-controls">
-                <button type="button" class="talk-toggle" id="hirofumi-ota-abstract-toggle" aria-controls="hirofumi-ota-abstract" aria-expanded="true" aria-label="Talk abstract for Hirofumi Ota" hidden>abstract</button>
-              </div>
-              <div class="talk-panel" id="hirofumi-ota-abstract" role="region" aria-labelledby="hirofumi-ota-abstract-toggle">
-                <p>Large language models often improve reasoning by sampling multiple outputs and aggregating their final answers, but precise and efficient control of error levels remains a challenging task. In particular, deciding when to stop sampling remains difficult when the stopping rule is data-dependent and the set of possible answers is not known in advance. We study anytime-valid certification of a prespecified target answer as the unique mode of the model&#x27;s response distribution, a guarantee distinct from answer correctness. We propose the Certification by Intersection-union Testing with E-processes (CITE) algorithm, which provably controls false certification at any prescribed level under arbitrary data-driven stopping, without requiring prior knowledge of the answer category set. We also prove an category-set-size-free stopping-time rate, establish matching minimax lower bounds up to constants in the main regime, and extend the construction to confidence-weighted voting. Simulations and LLM self-consistency experiments show empirical error control and improved certification in diffuse-tail settings.</p>
-              </div>
-            </li>
-            <li>
-              <a href="https://donlapark.pages.dev/">Donlapark Ponnoprat</a> (Chiang Mai University, Thailand)
-              <p class="talk-title" id="donlapark-ponnoprat-title">Doubly Robust Learning of Conditional Counterfactual Mean Embeddings</p>
-              <div class="talk-controls">
-                <button type="button" class="talk-toggle" id="donlapark-ponnoprat-abstract-toggle" aria-controls="donlapark-ponnoprat-abstract" aria-expanded="true" aria-label="Talk abstract for Donlapark Ponnoprat" hidden>abstract</button>
-              </div>
-              <div class="talk-panel" id="donlapark-ponnoprat-abstract" role="region" aria-labelledby="donlapark-ponnoprat-abstract-toggle">
-                <p>Heterogeneous treatment effects are usually summarized by the conditional average treatment effect. However, two treatments with the same conditional average can produce outcome distributions with different tails and different numbers of modes. In this talk, I will present a framework for estimating the full conditional distribution of a counterfactual outcome, represented by its mean embedding in a reproducing kernel Hilbert space. In the first part, I will show how a doubly robust pseudo-outcome reduces this problem to a vector-valued regression, which kernel ridge regression or neural network estimators can solve. In the second part, I will discuss finite-sample learning rates, in which the first stage enters only through the smaller of the two nuisance errors. Thus, the second-stage error governs the bound as long as one of the two nuisance models is estimated consistently. Finally, I will demonstrate applications to several downstream tasks, namely risk-sensitive treatment effect estimation, conditional two-sample testing, and risk-sensitive treatment policy learning.</p>
-              </div>
-            </li>
-            <li>
-              <a href="https://mahalakshmi-sabanayagam.github.io/">Mahalakshmi Sabanayagam</a> (Adelaide University, Australia)
-              <p class="talk-title" id="mahalakshmi-sabanayagam-title">Optimizer Geometry Sets the Pace: Spectral Learning Dynamics in Matrix Factorization</p>
-              <div class="talk-controls">
-                <button type="button" class="talk-toggle" id="mahalakshmi-sabanayagam-abstract-toggle" aria-controls="mahalakshmi-sabanayagam-abstract" aria-expanded="true" aria-label="Talk abstract for Mahalakshmi Sabanayagam" hidden>abstract</button>
-              </div>
-              <div class="talk-panel" id="mahalakshmi-sabanayagam-abstract" role="region" aria-labelledby="mahalakshmi-sabanayagam-abstract-toggle">
-                <p>Recent successes of matrix- and curvature-based optimizers have renewed interest in how update geometry shapes learning. These methods normalize or precondition updates, changing how different components progress during training. In deep matrix factorization, the geometry that slows gradient descent (GD) favors low-rank solutions by delaying the emergence of small singular modes. This raises the question of what remains of that spectral bias when normalization or curvature correction weakens or removes the slowdown. We study how optimizer geometry and depth jointly govern this behavior through a common framework for singular mode dynamics. Under explicit balance and alignment assumptions, we derive birth, saturation, and decay laws for Euclidean GD, coordinate-wise updates of SignGD and an instantaneous Adam approximation, spectral updates of Muon and cumulative Shampoo, and a block curvature model of K-FAC. The resulting picture is not a simple ordering from stronger to weaker low-rank bias. To highlight, SignGD and ideal Muon eliminate the divergent birth barrier and drive unsupported modes to zero in finite time. Cumulative Shampoo initially retains GD’s depth-dependent barrier, then accumulated gradients produce a catch-up phase while making previously active modes increasingly persistent. Undamped K-FAC cancels the factorization-induced slowdown while preserving the ordering of the target singular values, whereas positive damping introduces a spectral threshold below which the slow GD phase laws reappear. These results give normalization, accumulated state, damping, and depth a direct interpretation as controls determining when modes emerge, persist, and disappear during training.</p>
-              </div>
-            </li>
-            <li>
-              <a href="https://research.monash.edu/en/persons/russell-tsuchida/">Russell Tsuchida</a> (Monash University, Australia)
-              <p class="talk-title" id="russell-tsuchida-title">Bregman divergences for generalised attention and generalised score matching</p>
-              <div class="talk-controls">
-                <button type="button" class="talk-toggle" id="russell-tsuchida-abstract-toggle" aria-controls="russell-tsuchida-abstract" aria-expanded="true" aria-label="Talk abstract for Russell Tsuchida" hidden>abstract</button>
-              </div>
-              <div class="talk-panel" id="russell-tsuchida-abstract" role="region" aria-labelledby="russell-tsuchida-abstract-toggle">
-                <p>Bregman divergences are classical divergences on finite dimensional spaces, which generalise the squared Euclidean distance and find a wide range of applications throughout machine learning. In this talk, we present a functional Bregman divergence, particularly well-suited to operate on Hilbert spaces. A special case is the well-known squared maximum mean discrepancy. We will then describe an application of functional Bregman divergences to a Bayesian interpretation of the attention mechanism in transformer architectures, and an application of Bregman divergences in a generalised score matching setting.</p>
-              </div>
-            </li>
-            <li>
-              <a href="https://profiles.uts.edu.au/Junyu.Xuan">Junyu Xuan</a> (University of Technology Sydney, Australia)
-              <p class="talk-title" id="junyu-xuan-title">Functional Soft Diffusion Bridges</p>
-              <div class="talk-controls">
-                <button type="button" class="talk-toggle" id="junyu-xuan-abstract-toggle" aria-controls="junyu-xuan-abstract" aria-expanded="true" aria-label="Talk abstract for Junyu Xuan" hidden>abstract</button>
-              </div>
-              <div class="talk-panel" id="junyu-xuan-abstract" role="region" aria-labelledby="junyu-xuan-abstract-toggle">
-                <p>Diffusion bridges construct stochastic transports between prescribed endpoint distributions, yet stochastic optimal control formulations with soft terminal constraints have been developed primarily in finite-dimensional Euclidean spaces. We introduce Functional Soft Diffusion Bridge (FSDB), a framework for generative modeling of function-valued data that extends finite-penalty diffusion bridges to infinite-dimensional Hilbert spaces. FSDB relaxes exact endpoint conditioning through a quadratic terminal penalty with strength γ, yielding a closed-form feedback law involving the bounded resolvent (γ<sup>−1</sup>I+C<sub>t,T</sub>)<sup>−1</sup>. This formulation avoids the singular inverse-covariance operator associated with hard endpoint constraints while providing explicit control over the terminal penalty. We establish a spectral condition ensuring well-posedness of the infinite-dimensional reference process and show that the feedback recovers the corresponding hard function-space bridge in the limit γ → ∞. Experiments on synthetic functions, pharmacokinetic trajectories, and image-to-image transport demonstrate the framework’s applicability across diverse function-valued generative tasks.</p>
-              </div>
-            </li>
-            <li>
-              <a href="https://profiles.sydney.edu.au/yiming.ying">Yiming Ying</a> (The University of Sydney, Australia)
-              <p class="talk-title" id="yiming-ying-title">Stability and Generalization of Straight-Through Estimators for Training Two-Layer Quantized Neural Networks</p>
-              <div class="talk-controls">
-                <button type="button" class="talk-toggle" id="yiming-ying-abstract-toggle" aria-controls="yiming-ying-abstract" aria-expanded="true" aria-label="Talk abstract for Yiming Ying" hidden>abstract</button>
-              </div>
-              <div class="talk-panel" id="yiming-ying-abstract" role="region" aria-labelledby="yiming-ying-abstract-toggle">
-                <p>Quantisation is essential in modern deep learning for reducing memory footprints and accelerating inference on resource-constrained devices. However, training quantised networks with the straight-through estimator (STE) lacks theoretical understanding due to its non-smooth, discontinuous dynamics. In this work, we present a Statistical Learning Theory (SLT) framework for the identity STE in training two-layer binary-activation networks with hinge loss. We show that in the saturated-output regime, zero-initialised sample-wise STE updates are equivalent to stochastic sub-gradient descent on a convex latent loss, enabling a rigorous algorithmic stability analysis. By establishing approximate non-expansiveness of the update map, we prove explicit L<sub>2</sub> model-stability bounds that transfer isometrically to the full first-layer weight matrix. Crucially, we demonstrate that STE quantization achieves statistically optimal rates: an explicit excess induced-risk bound of 𝒪(n<sup>−1/2</sup>) at T = n<sup>2</sup>, and, under margin separability, an optimal 𝒪(R<sup>2</sup>/(γ<sup>2</sup> n)) expected excess misclassification error for a randomised one-pass iterate alongside a majority-vote guarantee.</p>
-              </div>
-            </li>
-          </ul>
-          <p class="announcement">Additional invited speakers to be confirmed.</p>
-        </section>
+        <section id="speakers" aria-labelledby="speakers-title"><h2 id="speakers-title">Invited speakers</h2><ul class="speaker-grid"><li class="speaker-card"><img class="speaker-photo" src="assets/speakers/siu-lun-chau.webp" alt="Siu Lun Chau" width="96" height="96" loading="lazy"><div class="speaker-information"><h3><a href="https://chau999.github.io/">Siu Lun Chau</a></h3><p class="speaker-institution">Nanyang Technological University, Singapore</p><p class="speaker-talk">Explainable Kernel Machines with Shapley values</p></div></li>
+<li class="speaker-card"><img class="speaker-photo" src="assets/speakers/kenji-fukumizu.webp" alt="Kenji Fukumizu" width="96" height="96" loading="lazy"><div class="speaker-information"><h3><a href="https://www.ism.ac.jp/~fukumizu/">Kenji Fukumizu</a></h3><p class="speaker-institution">The Institute of Statistical Mathematics, Japan</p><p class="speaker-talk">Understanding Flow Matching: Variational and Analytic Viewpoints</p></div></li>
+<li class="speaker-card"><img class="speaker-photo" src="assets/speakers/wei-huang.webp" alt="Wei Huang" width="96" height="96" loading="lazy"><div class="speaker-information"><h3><a href="https://weihuang05.github.io/">Wei Huang</a></h3><p class="speaker-institution">RIKEN, Japan</p><p class="speaker-talk">How Transformers Learn to Plan via Multi-Token Prediction</p></div></li>
+<li class="speaker-card"><img class="speaker-photo" src="assets/speakers/masaaki-imaizumi.webp" alt="Masaaki Imaizumi" width="96" height="96" loading="lazy"><div class="speaker-information"><h3><a href="https://sites.google.com/view/mimaizumi/">Masaaki Imaizumi</a></h3><p class="speaker-institution">The University of Tokyo, Japan</p><p class="speaker-talk">Memorization Capacity via Mean-Field Transformer Dynamics</p></div></li>
+<li class="speaker-card"><img class="speaker-photo" src="assets/speakers/noboru-isobe.webp" alt="Noboru Isobe" width="96" height="96" loading="lazy"><div class="speaker-information"><h3><a href="https://www.riken.jp/en/research/labs/aip/math/highdim_struct_theor/index.html">Noboru Isobe</a></h3><p class="speaker-institution">RIKEN, Japan</p><p class="speaker-talk">Training-Induced Escape from Token Clustering in a Mean-Field Formulation of Transformers</p></div></li>
+<li class="speaker-card"><img class="speaker-photo" src="assets/speakers/song-liu.webp" alt="Song Liu" width="96" height="96" loading="lazy"><div class="speaker-information"><h3><a href="https://allmodelsarewrong.net/">Song Liu</a></h3><p class="speaker-institution">University of Bristol, United Kingdom</p><p class="speaker-talk">Zero-Flow Methods</p></div></li>
+<li class="speaker-card"><img class="speaker-photo" src="assets/speakers/krikamol-muandet.webp" alt="Krikamol Muandet" width="96" height="96" loading="lazy"><div class="speaker-information"><h3><a href="https://www.krikamol.org/">Krikamol Muandet</a></h3><p class="speaker-institution">CISPA Helmholtz Center for Information Security, Saarbrücken, Germany</p><p class="speaker-talk">Title to be confirmed</p></div></li>
+<li class="speaker-card"><img class="speaker-photo" src="assets/speakers/tan-minh-nguyen.webp" alt="Tan Minh Nguyen" width="96" height="96" loading="lazy"><div class="speaker-information"><h3><a href="https://tanmnguyen89.github.io/">Tan Minh Nguyen</a></h3><p class="speaker-institution">National University of Singapore, Singapore</p><p class="speaker-talk">Title to be confirmed</p></div></li>
+<li class="speaker-card"><img class="speaker-photo" src="assets/speakers/hirofumi-ota.webp" alt="Hirofumi Ota" width="96" height="96" loading="lazy"><div class="speaker-information"><h3><a href="https://sites.google.com/site/hohtastats/home">Hirofumi Ota</a></h3><p class="speaker-institution">The University of Tokyo, Japan</p><p class="speaker-talk">Anytime-Valid Statistical Inference in LLM Self-Consistency</p></div></li>
+<li class="speaker-card"><img class="speaker-photo" src="assets/speakers/donlapark-ponnoprat.webp" alt="Donlapark Ponnoprat" width="96" height="96" loading="lazy"><div class="speaker-information"><h3><a href="https://donlapark.pages.dev/">Donlapark Ponnoprat</a></h3><p class="speaker-institution">Chiang Mai University, Thailand</p><p class="speaker-talk">Doubly Robust Learning of Conditional Counterfactual Mean Embeddings</p></div></li>
+<li class="speaker-card"><img class="speaker-photo" src="assets/speakers/mahalakshmi-sabanayagam.webp" alt="Mahalakshmi Sabanayagam" width="96" height="96" loading="lazy"><div class="speaker-information"><h3><a href="https://mahalakshmi-sabanayagam.github.io/">Mahalakshmi Sabanayagam</a></h3><p class="speaker-institution">Adelaide University, Australia</p><p class="speaker-talk">Optimizer Geometry Sets the Pace: Spectral Learning Dynamics in Matrix Factorization</p></div></li>
+<li class="speaker-card"><img class="speaker-photo" src="assets/speakers/russell-tsuchida.webp" alt="Russell Tsuchida" width="96" height="96" loading="lazy"><div class="speaker-information"><h3><a href="https://research.monash.edu/en/persons/russell-tsuchida/">Russell Tsuchida</a></h3><p class="speaker-institution">Monash University, Australia</p><p class="speaker-talk">Bregman divergences for generalised attention and generalised score matching</p></div></li>
+<li class="speaker-card"><img class="speaker-photo" src="assets/speakers/junyu-xuan.webp" alt="Junyu Xuan" width="96" height="96" loading="lazy"><div class="speaker-information"><h3><a href="https://profiles.uts.edu.au/Junyu.Xuan">Junyu Xuan</a></h3><p class="speaker-institution">University of Technology Sydney, Australia</p><p class="speaker-talk">Functional Soft Diffusion Bridges</p></div></li>
+<li class="speaker-card"><img class="speaker-photo" src="assets/speakers/yiming-ying.webp" alt="Yiming Ying" width="96" height="96" loading="lazy"><div class="speaker-information"><h3><a href="https://profiles.sydney.edu.au/yiming.ying">Yiming Ying</a></h3><p class="speaker-institution">The University of Sydney, Australia</p><p class="speaker-talk">Stability and Generalization of Straight-Through Estimators for Training Two-Layer Quantized Neural Networks</p></div></li></ul></section>
 
         <section id="programme" aria-labelledby="programme-title">
           <h2 id="programme-title">Programme</h2>
@@ -205,7 +91,7 @@
             <li><strong>Sunday 13 December:</strong> <time datetime="2026-12-13T10:00:00+10:30">10 am</time>–<time datetime="2026-12-13T17:00:00+10:30">5 pm</time></li>
             <li><strong>Monday 14 December:</strong> <time datetime="2026-12-14T09:00:00+10:30">9 am</time>–<time datetime="2026-12-14T17:00:00+10:30">5 pm</time></li>
           </ul>
-          <p>The detailed timetable will be announced. Available talk titles and abstracts can be found under <a href="#speakers">Invited speakers</a>.</p>
+          <p><a class="programme-link" href="programme.html">View the tentative programme and talk abstracts <span aria-hidden="true">→</span></a></p>
         </section>
 
         <section id="posters" aria-labelledby="posters-title">
