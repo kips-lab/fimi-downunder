@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#713b47">
+    <meta name="referrer" content="no-referrer">
+    <title>Posters · FIMI Down Under 2026</title>
+    <meta name="description" content="Poster presentations and abstracts for FIMI Down Under 2026.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/site.css">
+    <style>
+      .programme-page-header { min-height: 260px; padding-block: 42px; }
+      .programme-page-header h1 { font-size: 32px; }
+      .programme-page-kicker { margin-bottom: 10px; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; }
+      .programme-page-main { padding-top: 30px; }
+      .programme-page-title { border: 0; padding: 0; margin-bottom: 15px; }
+      .day-links { display: flex; gap: 12px; flex-wrap: wrap; margin: 20px 0 0; }
+      .day-links a { border: 1px solid var(--line); padding: 5px 12px; text-decoration: none; }
+      .day-links a:hover { border-color: var(--wine); background: var(--background); }
+      .programme-speaker { display: block; font-weight: 600; }
+      .programme-talk { display: block; margin-top: 3px; }
+      .programme-abstract { margin-top: 8px; }
+      .programme-abstract summary { width: fit-content; padding: 4px 10px; border: 1px solid var(--line); border-radius: 3px; background: var(--paper); color: var(--link); font-size: 13px; line-height: 1.5; cursor: pointer; }
+      .programme-abstract summary:hover, .programme-abstract[open] summary { border-color: var(--wine); background: var(--wine); color: white; }
+      .programme-abstract .talk-panel { font-size: 14px; font-weight: 400; line-height: 1.7; }
+      .programme-page-footer { margin-top: 20px; }
+      .poster-list { padding: 0; margin: 0; }
+      .poster-entry { list-style: none; padding: 15px 0; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+      .poster-entry:first-child { border-top: 1px solid var(--line); }
+      .poster-entry .programme-speaker { font-weight: 700; }
+      .poster-entry .talk-panel { margin-top: 10px; max-width: 76ch; }
+      .programme-abstract summary:focus-visible { outline: 2px solid var(--wine); outline-offset: 3px; }
+      @media (max-width: 640px) {
+        .programme-page-header { min-height: 220px; padding-block: 30px; }
+        .programme-page-header h1 { font-size: 26px; }
+        .programme-page-main { padding-top: 24px; }
+        .programme-page-title { font-size: 25px; }
+        .day-links { gap: 8px; }
+        .day-links a { font-size: 14px; }
+      }
+    </style>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to posters</a>
+    <header class="site-header programme-page-header">
+      <img class="header-photo" src="assets/adelaide-skyline.jpg" alt="Adelaide city skyline overlooking the River Torrens" width="2048" height="983">
+      <div class="header-content">
+        <p class="programme-page-kicker">Functional Inference and Machine Intelligence</p>
+        <h1>FIMI Down Under 2026</h1>
+        <p class="workshop-date">Adelaide, Australia · 13–14 December 2026</p>
+        <p class="workshop-location">National Wine Centre of Australia</p>
+      </div>
+    </header>
+    <div class="page">
+      <nav class="day-links" aria-label="Workshop navigation"><a href="index.html">← Workshop home</a><a href="programme.html">Programme</a></nav>
+      <main id="main" class="programme-page-main">
+        <h2 class="programme-page-title">Posters</h2>
+        <p>Select “abstract” to read more about each poster.</p>
+        <ul class="poster-list" role="list">
+          <li class="poster-entry" id="poster-1">
+            <strong class="programme-speaker">Yihe CHEN</strong>
+            <span class="programme-talk">Fair Causal Experimental Design under Welfare Constraints</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: Fair Causal Experimental Design under Welfare Constraints">abstract</summary>
+              <div class="talk-panel"><p>An adaptive experiment should learn which treatment works for whom while accounting for participant outcomes. Good average accuracy can hide large errors for smaller groups, and the most informative treatment need not offer the greatest expected benefit to the person receiving it. We study Bayesian experimental design with recruitment and treatment probabilities that depend on individual covariates. Our loss combines average and worstgroup squared error in conditional average treatment effects; an optional term values improvements in later treatment decisions. Each candidate query receives an acquisition score equal to its expected reduction in this loss. A welfare constraint limits model-predicted loss in participant outcomes relative to giving either treatment with equal probability. Under a joint Gaussian model on a fixed finite target population, we express acquisition scores in terms of posterior moments and derive a nonnegative unbiased estimator for the worst-group term. This avoids repeatedly simulating outcomes and refitting the model. A linear program then determines recruitment and treatment probabilities. Synthetic and semi-synthetic experiments illustrate tradeoffs between average and worst-group accuracy, later treatment decisions, and participant outcomes.</p></div>
+            </details>
+          </li>
+          <li class="poster-entry" id="poster-2">
+            <strong class="programme-speaker">Vinh Nguyen</strong>
+            <span class="programme-talk">ResT-LAVA: Data Valuation for Treatment Effects</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: ResT-LAVA: Data Valuation for Treatment Effects">abstract</summary>
+              <div class="talk-panel"><p>Data valuation improves Machine Learning (ML) model performance by selecting informative training samples and removing noisy, mislabelled, or corrupted outliers. Existing Optimal Transport (OT)-based data valuation methods such as Learning-Agnostic Data Valuation (LAVA) and Scalable Data Valuation (SAVA) are model-agnostic and training-free at the valuation stage, but are limited to standard supervised learning datasets. We make four main contributions: i) We introduce Residual-based Treatment-aware LAVA (ResT-LAVA), extending the LAVA data valuation framework to observational data triplets (covariate, treatment, and outcome) by incorporating treatment-aware residuals into the transport cost to audit individual samples and guide pruning. ii) Across five semi-synthetic benchmarks and five corruption regimes, a single fixed ResT-LAVA configuration identifies covariate, treatment, and outcome corruption competitively with or better than the evaluated LAVA-family and non-causal data valuation baselines, achieving higher average detection performance across regimes than these baselines. iii) Averaged across these benchmarks, ResT-LAVA-informed pruning of the 5% lowest-value samples improves downstream treatment-effect estimation for every evaluated learner and corruption regime. iv) Under binary treatment-label corruption, we show that the residual-based Wasserstein distance bounds the corruption bias in treatment effect estimation, motivating the residual transport cost.</p></div>
+            </details>
+          </li>
+          <li class="poster-entry" id="poster-3">
+            <strong class="programme-speaker">Max Ren</strong>
+            <span class="programme-talk">Decomposing Cross-Domain Performance Degradation in Moral Foundations Classification</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: Decomposing Cross-Domain Performance Degradation in Moral Foundations Classification">abstract</summary>
+              <div class="talk-panel"><p>Finetuning adapts language models to specific tasks, but can lose performance outside of their training domains. Yet, poor cross-domain performance leaves unresolved whether task information is inaccessible or the classifier fails to utilise it. We investigate this decomposition of cross-domain performance degradation through moral foundations classification using encoder- (RoBERTa) and decoder-only (Qwen3) embedding models. Here we show source-finetuned representations support substantially better target domain performance than their original classifiers achieve, although this does not consistently close the gap to target-trained references. By comparing supervised readouts on frozen pretrained, source- and target-finetuned representations, we distinguish observed readout recovery from the remaining gap due to representation limitations. Topic-level recovery varies considerably and does not consistently track the initial transfer degradations. Source finetuning generally improves target-task performance over pretrained representations for RoBERTa, while its benefits are smaller or absent in many Qwen3 settings. These findings show that poor transfer can understate accessible task information, highlighting the need to distinguish classifier performance from representation sufficiency for better model generalisation.</p></div>
+            </details>
+          </li>
+          <li class="poster-entry" id="poster-4">
+            <strong class="programme-speaker">Gia Bao Hoang</strong>
+            <span class="programme-talk">Bayesian Nonparametric Inference of Latent Participant Types from Premise Structure</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: Bayesian Nonparametric Inference of Latent Participant Types from Premise Structure">abstract</summary>
+              <div class="talk-panel"><p>Bayesian nonparametric mixture models provide a flexible approach to probabilistic clustering by allowing the occupied component structure and uncertainty in the resulting partition to be inferred from the data. This flexibility is useful for premise analysis, where participants may differ not only in which beliefs they endorse but also in how interrelated premises are organised. Continuous belief ratings can be represented naturally through Gaussian mixture models; however, naturally occurring online discourse more often provides incomplete binary observations of whether a premise is expressed, rather than direct measurements of the underlying belief state.</p>
+<p>Here we present a Dirichlet process Gaussian mixture model framework for inferring latent participant types from both continuous belief representations and binary premise observations. The continuous Gaussian model provides the methodological foundation, while Pólya–Gamma augmentation links binary responses to conditionally Gaussian latent states within the same posterior sampling architecture. An additional exploratory approach represents directed relationships among premises through covariance structures informed by a structural equation model.</p>
+<p>Using synthetic premise networks with known latent participant groups, we demonstrate the feasibility of obtaining interpretable posterior partitions under continuous observation conditions and establish a preliminary evaluation path for binary observations. The framework unifies alternative observation mechanisms while retaining uncertainty over component structure and participant membership. It provides a modular statistical perspective for extending premise clustering to additional networks, missingness mechanisms and representations derived from natural discourse.</p></div>
+            </details>
+          </li>
+          <li class="poster-entry" id="poster-5">
+            <strong class="programme-speaker">Rafael Oliveira</strong>
+            <span class="programme-talk">Kernel-based guarantees for nonlinear parametric models in Bayesian optimization</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: Kernel-based guarantees for nonlinear parametric models in Bayesian optimization">abstract</summary>
+              <div class="talk-panel"><p>Modern Bayesian optimization and adaptive sampling methods increasingly rely on nonlinear parametric models, such as neural networks, yet theoretical guarantees for such models under adaptive data collection remain limited. Existing analyses largely focus on Gaussian processes, kernel machines, linear models, or linearized neural approximations, leaving a gap between theory and the nonlinear models used in practice. We develop a kernel-based framework for analyzing regularized parametric models trained on adaptively collected data. Our approach uses kernels over the parameter space to induce reproducing kernel Hilbert space structures over the corresponding model class, yielding confidence bounds for models trained with a broad class of regularized losses. We show how these bounds can establish convergence guarantees for approximate Thompson sampling and provide a foundation for analyzing broader likelihood-free Bayesian optimization methods. These results provide a unified route to analyzing nonlinear models in Bayesian optimization and related adaptive optimization settings.</p></div>
+            </details>
+          </li>
+          <li class="poster-entry" id="poster-6">
+            <strong class="programme-speaker">SHUNYU ZHAO</strong>
+            <span class="programme-talk">Reusable Conditional Resampling via Flow Matching for Constraint-Based Causal Discovery</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: Reusable Conditional Resampling via Flow Matching for Constraint-Based Causal Discovery">abstract</summary>
+              <div class="talk-panel"><p>Constraint-based causal discovery requires a large number of conditional independence (CI) tests. Generative CI tests are attractive in nonlinear and high-dimensional settings because they can model complex conditional distributions, but often suffer from high per test cost and limited reusability across the many query dependent conditional resampling tasks arising in graph search. We propose a generative nonlinear CI testing and graph search framework for PC-style causal discovery. We first propose the Langevin-RePaint algorithm for conditional imputation. Building on Langevin-RePaint and joint flow matching modeling, we propose the Flow Matching based Conditional Independence Test (FMCIT), which reformulates generative CI testing from query-specific conditional modeling into a reusable conditional resampling framework. We further establish theoretical guarantees for the Type-I error control of FMCIT. FMCIT allows a single trained generative model to repeatedly generate the randomized copies required for CI testing throughout the entire graph search procedure. We then introduce GPC‑FMCIT, which embeds FMCIT into a guided PC pipeline with screening, guidance, refinement, and orientation. By using low-cost screening to shrink the search space, constructing edge-specific candidate conditioning sets from local graph structure, and invoking FMCIT only in a budget-controlled refinement stage, GPC-FMCIT reduces both the deployment cost of individual nonlinear CI queries and the overall query complexity. Experiments on synthetic datasets and real-data analyses show that the proposed method achieves a strong accuracy–efficiency trade-off under nonlinear and high-dimensional structures. Overall, our results suggest that, through the joint design of reusable conditional resampling and controlled graph search, generative nonlinear CI testing can become a practical component of PC-style causal discovery.</p></div>
+            </details>
+          </li>
+          <li class="poster-entry" id="poster-7">
+            <strong class="programme-speaker">Peter Moskvichev</strong>
+            <span class="programme-talk">Measuring Differences between Conditional Distributions using Kernel Embeddings</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: Measuring Differences between Conditional Distributions using Kernel Embeddings">abstract</summary>
+              <div class="talk-panel"><p>Comparing conditional distributions is a fundamental challenge in statistics and machine learning, with applications across a wide range of domains. While proposed methods for measuring discrepancies using kernel embeddings of distributions in a reproducing kernel Hilbert space (RKHS) provide powerful non-parametric techniques, the existing literature remains fragmented and lacks a unified theoretical treatment. This paper addresses this gap by establishing a coherent framework for studying kernel-based methods to measure divergence between conditional distributions through what we refer to as conditional maximum mean discrepancy (CMMD). The CMMD consists of a family of metrics which we call levels, with three special cases each using a different type of RKHS embedding: CMMD<sub>0</sub> (conditional mean operators), CMMD<sub>1</sub> (conditional mean embeddings), and CMMD<sub>2</sub> (joint mean embeddings). We additionally introduce a general level <i>s</i> CMMD, clarifying the required assumptions, and establishing mathematical connections between the levels through the lens of operator-based smoothing. In addition to reviewing previously proposed estimators, we introduce a novel doubly robust estimator for the CMMD that maintains consistency provided the product of errors of the underlying models reduces sufficiently fast. We provide numerical experiments demonstrating that the CMMD effectively captures complex conditional dependencies for statistical testing.</p></div>
+            </details>
+          </li>
+          <li class="poster-entry" id="poster-8">
+            <strong class="programme-speaker">Mengjing Wu</strong>
+            <span class="programme-talk">Functional Stochastic Gradient MCMC for Bayesian Neural Networks</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: Functional Stochastic Gradient MCMC for Bayesian Neural Networks">abstract</summary>
+              <div class="talk-panel"><p>Classical parameter-space Bayesian inference for Bayesian neural networks (BNNs) suffers from several unresolved prior issues, such as knowledge encoding intractability and pathological behaviours in deep networks. To address these issues, functional Bayesian inference has recently been proposed, such as the functional variational inference, where more informative stochastic processes can serve as the functional priors. Apart from variational methods, stochastic gradient Markov Chain Monte Carlo (MCMC) is another scalable and effective inference method for BNNs to asymptotically generate samples from the true posterior by simulating continuous dynamics. However, existing MCMC methods typically perform in parameter space and inherit the unresolved prior issues, while extending these methods to function space is a non-trivial undertaking. This work proposes novel functional MCMC schemes based on newly designed diffusion dynamics that can incorporate functional priors into the diffusion processes and simultaneously guarantee the target posterior over functions as the stationary measure.</p></div>
+            </details>
+          </li>
+          <li class="poster-entry" id="poster-9">
+            <strong class="programme-speaker">Yanfeng Yang</strong>
+            <span class="programme-talk">Domain-Adapted Diffusion Models for Conditional Independence Testing</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: Domain-Adapted Diffusion Models for Conditional Independence Testing">abstract</summary>
+              <div class="talk-panel"><p>Conditional independence (CI) is a fundamental concept in statistics and machine learning. Recent advances in conditional generative modeling provide flexible tools for generative-model-based CI tests, which rely on an estimated conditional distribution to generate randomized samples. However, errors in estimating this distribution accumulate in existing Type I error bounds, and consistency of the generative estimator alone does not guarantee asymptotic Type I error control. To address this limitation, we formulate conditional generative modeling as a domain adaptation problem and leverage auxiliary data from multiple source domains to improve estimation in the target CI testing domain. We propose Domain-Adapted Diffusion (DA-Diff), a multi-source domain adaptation framework for conditional diffusion models based on weighted empirical risk minimization over both target and source domains. We establish the convergence rate of DA-Diff and show how transferable source data can improve target-domain estimation through an increased effective sample size while controlling transfer bias. Building on DA-Diff, we further propose Domain-Adapted Conditional Independence Testing (DA-CIT) and show that its Type I error satisfies <i>P</i>(<i>p</i> ≤ α) ≤ α + <i>o</i>(1). Experiments demonstrate that DA-Diff improved conditional generation quality compared with transfer-learning diffusion baselines, while DA-CIT provides strong Type I error control and competitive power.</p></div>
+            </details>
+          </li>
+          <li class="poster-entry" id="poster-10">
+            <strong class="programme-speaker">Joel Wills</strong>
+            <span class="programme-talk">Structural Misspecification of DPO</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: Structural Misspecification of DPO">abstract</summary>
+              <div class="talk-panel"><p>Direct Preference Optimization (DPO) provides a simple approach to aligning language models with human preferences, but its guarantees depend on modelling assumptions that may fail. This poster examines structural misspecification when preferences do not admit the Bradley–Terry representation underlying DPO. We characterise this obstruction through the triangle-curl of preference log-odds and derive excess logistic-risk bounds separating structural misspecification, model approximation, and finite-sample estimation. These results clarify which errors can be reduced through increased model capacity and additional data, and establish conditions under which structural misspecification creates a persistent excess-risk floor.</p></div>
+            </details>
+          </li>
+          <li class="poster-entry" id="poster-11">
+            <strong class="programme-speaker">Aoqi ZUO</strong>
+            <span class="programme-talk">Counterfactual AUC Fairness: Learning Fair Bipartite Ranking under Intervention</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: Counterfactual AUC Fairness: Learning Fair Bipartite Ranking under Intervention">abstract</summary>
+              <div class="talk-panel"><p>Causal fairness and AUC fairness have largely developed separately: the former studies how predictions respond to interventions on sensitive attributes, whereas the latter compares ranking performance across observed groups. We bridge these perspectives by introducing <em>counterfactual AUC fairness</em> (CF-AUC), which asks whether ranking accuracy within each positive–negative pair population remains stable when both individuals&#39; sensitive attributes are counterfactually intervened. By fixing the pair population, CF-AUC isolates intervention-induced ranking changes from changes in population composition. We decompose observational AUC disparities into causal and population components and show that observational parity can be achieved by introducing counterfactual ranking changes while leaving factual AUC unchanged. We further characterize CF-AUC&#39;s relation to its pairwise and population variants and distinguish it from fixed-threshold decision invariance and score invariance. We then formulate fair ranking as maximizing factual AUC subject to groupwise CF-AUC constraints, providing a differentiable surrogate formulation, and bound the discrepancy between true and estimated CF-AUC gaps in terms of counterfactual-generation error, scorer sensitivity, and pairwise margin concentration near the ranking boundary. Experiments on synthetic and real data demonstrate favorable fairness–utility trade-offs.</p></div>
+            </details>
+          </li>
+          <li class="poster-entry" id="poster-12">
+            <strong class="programme-speaker">Zihan Zhang</strong>
+            <span class="programme-talk">Minimax Rates for Pairwise Ranking</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: Minimax Rates for Pairwise Ranking">abstract</summary>
+              <div class="talk-panel"><p>Pairwise ranking aims to order two inputs using i.i.d. input-output data. In recent years, neural networks have become important tools for pairwise ranking, with applications ranging from search engine ranking to reward modeling for large language models. Despite these practical successes, sharp statistical guarantees and the conditions ensuring optimal performance remain incompletely understood. In this poster, we present our latest theoretical advances in pairwise ranking over [0,1]^d. First, under Hölder smoothness of the conditional pairwise comparison function, we establish the minimax optimal convergence rate for 0-1 ranking risk, which measures pairwise ordering errors. We show that a broad class of neural network empirical risk minimizers cannot attain this rate, revealing their failure to exploit the intrinsic d-dimensional statistical structure of the conditional pairwise comparison function, whose input domain is nevertheless 2d-dimensional. Second, we study cross-entropy-based ranking risk, which is widely used in practice. We assume that the conditional pairwise comparison function is a composition of q+1 Hölder smooth vector-valued functions h_q ∘ ⋯ ∘ h_1 ∘ h_0, with each coordinate function of each h_i depending on at most d* of its input coordinates, where d* ≤ 2d. We establish minimax optimal rates up to logarithmic factors and show that deep neural networks trained by empirical risk minimization can attain these rates when q &gt; 0 and d* ≤ d. These results highlight the particular effectiveness of deep neural networks for pairwise ranking problems with sparse compositional structure.</p></div>
+            </details>
+          </li>
+          <li class="poster-entry" id="poster-13">
+            <strong class="programme-speaker">Mana Sakai</strong>
+            <span class="programme-talk">Fast Learning Rate Transfer in Shallow Linear Networks at Growing Training Horizons</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: Fast Learning Rate Transfer in Shallow Linear Networks at Growing Training Horizons">abstract</summary>
+              <div class="talk-panel"><p>Hyperparameter transfer across model width can substantially reduce the cost of tuning large neural networks, but its behavior when the training horizon grows with width is not fully understood. Building on the framework of fast hyperparameter transfer (Ghosh et al., 2026), which formalizes when transfer is effective, we investigate conditions that ensure fast transfer in the growing-horizon regime. Specifically, we study learning-rate transfer in a shallow linear network with a single trainable hidden matrix, trained by full-batch gradient descent. Under additional spectral assumptions, our main results are threefold. (i) We prove fast learning-rate transfer as <i>n</i>, <i>T</i> → ∞ whenever <i>T</i> = <i>o</i>(√<i>n</i>). (ii) We characterize the transfer rates through the finite-width perturbation scale, the first-order sensitivities of the loss and its learning-rate derivative to finite-width perturbations, and the local loss curvature. (iii) We derive limiting distributions for the optimal learning rate and optimized loss, governed by fluctuations associated with the extreme eigenvalues of the data Gram matrix. These results clarify how spectral structure and local loss sensitivities govern learning-rate transfer at growing horizons.</p></div>
+            </details>
+          </li>
+          <li class="poster-entry" id="poster-14">
+            <strong class="programme-speaker">Sherman Khoo</strong>
+            <span class="programme-talk">Local Manifold Identification with Latent Linear Models and OT Flows</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: Local Manifold Identification with Latent Linear Models and OT Flows">abstract</summary>
+              <div class="talk-panel"><p>The manifold hypothesis states that high-dimensional data often concentrate near low-dimensional structures. Identifying these local manifold structures allows us to separate signals from ambient noise. In this paper, we study the problem of identifying local manifold structure from data. Given a query point <i>y</i><sub>0</sub> from a dataset, our goal is to recover the geometry of the data manifold in a neighborhood of <i>y</i><sub>0</sub> using a <em>pretrained</em> optimal transport flow from the reference to the data distribution. First, we prove that the Brenier optimal transport map preserves manifold structure: the preimage of an <i>m</i>-dimensional data manifold is itself an <i>m</i>-dimensional manifold in the reference space. Second, motivated by this result, we propose a latent variable model that maps a linear model through the transport flow. We prove that the linear approximation error is significantly reduced by the optimal transport map, leading to a tight fit of the non-linear data manifold. Third, noting the intractability of the resulting likelihood, we deploy denoising Fisher score estimation — a recent development from simulation-based inference that learns the Fisher score over parameter–observation pairs — to perform likelihood-based inference effectively. Experiments on both synthetic and real-world datasets demonstrate the effectiveness of the proposed method.</p></div>
+            </details>
+          </li>
+          <li class="poster-entry" id="poster-15">
+            <strong class="programme-speaker">Ziyan Chen</strong>
+            <span class="programme-talk">Compute Allocation in Bilinear Contrastive Representation Learning via Scaling Laws</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: Compute Allocation in Bilinear Contrastive Representation Learning via Scaling Laws">abstract</summary>
+              <div class="talk-panel"><p>Efficient reasoning systems increasingly rely on large contrastive representation models for multimodal retrieval, grounding, and decision-making. However, under a limited compute budget, it is unclear how to allocate resources among representation dimension, paired data, and optimization steps. We study this question in a sketched bilinear contrastive-learning model. Under a paired Gaussian latent-variable setup, we derive a risk decomposition into irreducible risk, approximation error, GD bias, GD variance, and a cross term. The resulting scaling law shows that contrastive learning differs from standard linear regression because the effective degrees of freedom are pairs of spectral directions rather than single directions. This product effective dimension determines how finite-sample noise grows with optimization time. Most importantly, using the compute proxy, we derive compute-allocation rules balancing model size, data, and training time. To the best of our knowledge, our result provides the first theoretical backbone for resource allocation in contrastive representation learning through provable scaling laws.</p></div>
+            </details>
+          </li>
+          <li class="poster-entry" id="poster-16">
+            <strong class="programme-speaker">Yuanfan Li</strong>
+            <span class="programme-talk">Approximation in Contrastive Representation Learning</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: Approximation in Contrastive Representation Learning">abstract</summary>
+              <div class="talk-panel"><p>Contrastive representation learning (CRL) is a fundamental paradigm for learning transferable representations. Recent work identifies its population target as the pointwise mutual information (PMI) <math><mi>log</mi><mfrac><mrow><mi>p</mi><mo>(</mo><mi mathvariant="bold">x</mi><mo>,</mo><mi mathvariant="bold">y</mi><mo>)</mo></mrow><mrow><msub><mi>p</mi><mi mathvariant="script">X</mi></msub><mo>(</mo><mi mathvariant="bold">x</mi><mo>)</mo><msub><mi>p</mi><mi mathvariant="script">Y</mi></msub><mo>(</mo><mi mathvariant="bold">y</mi><mo>)</mo></mrow></mfrac></math> between two modalities 𝒳, 𝒴, where <i>p</i> is the joint density function and <i>p</i><sub>𝒳</sub>, <i>p</i><sub>𝒴</sub> are the marginals. However, it remains unclear why standard inner-product scores <i>f</i>(<b>x</b>)<sup>⊤</sup> <i>g</i>(<b>y</b>) can effectively approximate a generally nonseparable population target PMI. In this paper, we address this question from the aspect of approximation for CRL. By linking PMI to a compact operator, we show that <i>D</i>-dimensional inner-product models perform rank-<i>D</i> spectral approximation, with error controlled by the spectral tail. We then study neural network realizations: in general settings, we show that deep neural network scoring functions are universally consistent, and the approximation error rates depend on the smoothness of the PMI function; under structured low-rank data models we obtain improved rates attained by moderate-width encoders. Finally, we establish a fast calibration rate from contrastive excess risk to downstream retrieval error under a density-ratio Tsybakov noise condition.</p></div>
+            </details>
+          </li>
+          <li class="poster-entry" id="poster-17">
+            <strong class="programme-speaker">Zhenyu Yang</strong>
+            <span class="programme-talk">Approximating Nonlinear Functionals from Spherical Data</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: Approximating Nonlinear Functionals from Spherical Data">abstract</summary>
+              <div class="talk-panel"><p>Functions on the sphere arise naturally in applications such as global environmental monitoring and astronomical sky observations. In many inference tasks, the aim is to estimate a scalar quantity that depends on the entire function, often from finitely many, possibly noisy measurements. These problems motivate the approximation of nonlinear functionals defined on classes of spherical functions.</p>
+<p>In this talk, I will present an encoder–decoder framework that connects spherical approximation theory with deep ReLU networks. A fixed encoder uses filtered spherical harmonics to obtain a finite-dimensional representation, and a neural network approximates the resulting function of these features. For Hölder-continuous nonlinear functionals on spherical Sobolev classes, I will discuss approximation bounds under three input models: complete functions, discrete samples at suitable spherical nodes, and samples corrupted by independent, bounded, mean-zero noise. The results relate approximation accuracy to the smoothness of the input functions, the regularity of the functional, the network size, and the number of observations. I will also explain why stable spherical discretization and uniform control of the noise are central to the analysis.</p></div>
+            </details>
+          </li>
+          <li class="poster-entry" id="poster-18">
+            <strong class="programme-speaker">Eiki Shimizu</strong>
+            <span class="programme-talk">Incorporating Neural Network Structure in the Bayesian Learning Rule</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: Incorporating Neural Network Structure in the Bayesian Learning Rule">abstract</summary>
+              <div class="talk-panel"><p>The Bayesian Learning Rule (BLR) specifies how loss gradients update an exponential family (EF) posterior, but computing these gradients efficiently through a neural network (NN) requires exploiting its layered structure. We introduce a constrained Lagrangian formulation that connects EF duality with NN backpropagation, coupling forward propagation, backward sensitivities, and BLR posterior updates. Backpropagating through the resulting distributional states yields approximate BLR loss-site natural parameters. For Gaussian weight posteriors, we instantiate this framework with a sampling-free projection of layer-state means and covariances. Under delta-method localization, its forward and backward recursions recover the point-estimate forward pass, backpropagation, and Hessian backpropagation as special cases. More generally, this connects forward moment propagation with the corresponding backward propagation of distributional sensitivities, bringing together two perspectives often studied separately. We use the resulting sampling-free gradient and diagonal-Hessian estimates in IVON, replacing its Monte Carlo-based estimators while retaining its practical update rules.</p></div>
+            </details>
+          </li>
+          <li class="poster-entry" id="poster-19">
+            <strong class="programme-speaker">Sherman Khoo</strong>
+            <span class="programme-talk">Learning Coherent Bayesian Updates</span>
+            <details class="programme-abstract">
+              <summary aria-label="Abstract: Learning Coherent Bayesian Updates">abstract</summary>
+              <div class="talk-panel"><p>Amortized Bayesian inference enables fast posterior sampling for new datasets, but learned posterior approximations need not obey coherent Bayesian updating. We propose a generative learning framework that encourages consistency between an estimator’s current beliefs and its beliefs after observing additional data.</p>
+<p>The method matches two joint distributions - one formed by sampling a parameter from the current posterior approximation and generating a new observation, and another formed by pairing that observation with a sample from the updated approximation. Training across datasets of varying sizes connects these consistency constraints to the intended Bayesian model.</p>
+<p>The objective can be estimated using sample-based discrepancies without evaluating likelihoods or posterior densities. After training, the generator provides approximate posterior samples directly for new datasets, without additional simulation or optimization. This framework incorporates Bayesian conditioning consistency into amortized posterior learning by explicitly targeting compatibility across successive observations.</p></div>
+            </details>
+          </li>
+        </ul>
+      </main>
+      <footer class="site-footer programme-page-footer">
+        <p>FIMI Down Under 2026 · Posters</p>
+        <p><a href="./">Workshop website</a> · <a href="#top">Back to top</a></p>
+        <p class="photo-credit">Header photograph: <a href="https://commons.wikimedia.org/wiki/File:Adelaide_skyline,_December_2022.jpg">Ardash Muradian</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a> (cropped with a colour overlay).</p>
+      </footer>
+    </div>
+  </body>
+</html>
